@@ -362,6 +362,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayTanzanite \
     FrameworksResOverlayTanzanite \
+    OpenDeltaOverlayTanzanite \
     SettingsResOverlayTanzanite \
     SettingsProviderResOverlayTanzanite \
     SystemUIOverlayTanzanite \
