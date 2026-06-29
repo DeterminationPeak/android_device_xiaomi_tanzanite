@@ -68,15 +68,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Compressed Virtual A/B
-ifneq ($(WITH_GMS),true)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-TARGET_RO_FILE_SYSTEM_TYPE := ext4
-else
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 TARGET_RO_FILE_SYSTEM_TYPE := erofs
 PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.compression.threads=true
-endif
 
 # Boot control (A/B Updates)
 PRODUCT_PACKAGES += \
