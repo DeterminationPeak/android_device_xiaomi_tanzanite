@@ -6,6 +6,7 @@
 
 DEVICE_PATH := device/xiaomi/tanzanite
 KERNEL_PATH := device/xiaomi/tanzanite-kernel
+COMMON_GKI_PATH := device/millennium/common-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -75,7 +76,7 @@ TARGET_NO_KERNEL_OVERRIDE := true
 # Workaround to make lineage's soong generator work
 TARGET_KERNEL_SOURCE := device/xiaomi/tanzanite-kernel/kernel-headers
 
-LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
+LOCAL_KERNEL := $(COMMON_GKI_PATH)/yuuka/Image.gz
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
