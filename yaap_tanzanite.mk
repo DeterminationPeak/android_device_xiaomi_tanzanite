@@ -8,14 +8,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Yet Another AOSP Project stuff.
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Inherit from tanzanite device
 $(call inherit-product, device/xiaomi/tanzanite/device.mk)
 
 PRODUCT_DEVICE := tanzanite
-PRODUCT_NAME := lineage_tanzanite
+PRODUCT_NAME := yaap_tanzanite
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 24117RN76O
 PRODUCT_MANUFACTURER := xiaomi
@@ -35,3 +35,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
     SystemDevice=$(PRODUCT_SYSTEM_DEVICE) \
     SystemName=$(PRODUCT_SYSTEM_NAME)
+
+TARGET_BOARD_PLATFORM := mt6789
