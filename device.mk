@@ -358,6 +358,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
+# Overlay for no PPU
+PRODUCT_PACKAGES += \
+    EmptyPropsOverlay
+
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayTanzanite \
